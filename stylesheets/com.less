@@ -1,0 +1,90 @@
+
+// animations
+.animation(@animation){
+  -webkit-animation: @animation;
+  -moz-animation: @animation;
+  animation: @animation;
+}
+
+.create-animation(@name, @code){
+  @-webkit-keyframes @name {@code();}
+  @-moz-keyframes @name {@code();}
+  @keyframes @name {@code();}
+}
+
+// creating an animation with name
+.create-animation(custom-animation_fadeLeft,{
+  from{
+    left: 0%;
+  }
+  to{
+    left: -100%;
+  }
+});
+
+img[preloading-image]{
+  display: none;
+}
+
+.story{
+  &[story-id="mystory"]{
+    position: relative;
+    width: 100%;
+
+    overflow: hidden;
+    .plan{
+      display: none;
+      z-index: 0;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      &.start{
+        display: block;
+        z-index: 2;
+      }
+      &.stop{
+        display: block;
+        z-index: 1;
+      }
+      .element{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+      }
+      .button{
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        .create-animation(waiting_button,{
+          from{
+            margin-left: -10px;
+          }
+          to{
+            margin-left: 10px;
+          }
+        });
+        .animation(waiting_button 0.05s infinite);
+        &[ready="1"]{
+          .animation(none);
+          background: blue;
+        }
+      }
+      &[plan-id="plan001"]{
+        background: red;
+        &.stop{
+          .animation(fadeLeft 1s);
+        }
+      }
+      &[plan-id="plan002"]{
+        background: green;
+        &.start{
+          .animation(fadeLeft);
+        }
+      }
+    }
+  }
+}
