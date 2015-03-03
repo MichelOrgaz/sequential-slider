@@ -1,0 +1,90 @@
+@-webkit-keyframes custom-animation_fadeLeft {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+@-moz-keyframes custom-animation_fadeLeft {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes custom-animation_fadeLeft {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+img[preloading-image] {
+  display: none;
+}
+.story[story-id="story01test"] {
+  width: 600px;
+}
+.story[story-id="story01test"] .plan .button {
+  -webkit-animation: waiting_button 0.05s infinite;
+  -moz-animation: waiting_button 0.05s infinite;
+  animation: waiting_button 0.05s infinite;
+}
+.story[story-id="story01test"] .plan .button.back {
+  right: auto;
+  left: 0%;
+}
+@-webkit-keyframes waiting_button {
+  from {
+    margin-left: -10px;
+  }
+  to {
+    margin-left: 10px;
+  }
+}
+@-moz-keyframes waiting_button {
+  from {
+    margin-left: -10px;
+  }
+  to {
+    margin-left: 10px;
+  }
+}
+@keyframes waiting_button {
+  from {
+    margin-left: -10px;
+  }
+  to {
+    margin-left: 10px;
+  }
+}
+.story[story-id="story01test"] .plan .button[ready="1"] {
+  -webkit-animation: none;
+  -moz-animation: none;
+  animation: none;
+  background: blue;
+}
+.story[story-id="story01test"] .plan[plan-id="p01"] .element[element-id="perso"] {
+  background-image: url("../images/01.jpg");
+}
+.story[story-id="story01test"] .plan[plan-id="p02"] .element[element-id="perso"] {
+  background-image: url("../images/02.jpg");
+}
+.story[story-id="story01test"] .plan[plan-id="p03"] .element[element-id="perso"] {
+  background-image: url("../images/03.jpg");
+}
+.story[story-id="story01test"] .plan[plan-id="p04"] .element[element-id="perso"] {
+  background-image: url("../images/04.jpg");
+}
+.story[story-id="story01test"] .plan[plan-id="p05"] .element[element-id="perso"] {
+  background-image: url("../images/05.jpg");
+}
+.story[story-id="story01test"] .plan[plan-id="p06"] .element[element-id="perso"] {
+  background-image: url("../images/06.jpg");
+}
+.story[story-id="story01test"] .plan[plan-id="p07"] .element[element-id="perso"] {
+  background-image: url("../images/07.jpg");
+}

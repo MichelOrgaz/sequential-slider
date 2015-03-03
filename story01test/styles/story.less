@@ -1,0 +1,95 @@
+
+// animations
+.animation(@animation){
+  -webkit-animation: @animation;
+  -moz-animation: @animation;
+  animation: @animation;
+}
+
+.create-animation(@name, @code){
+  @-webkit-keyframes @name {@code();}
+  @-moz-keyframes @name {@code();}
+  @keyframes @name {@code();}
+}
+
+// creating an animation with name
+.create-animation(custom-animation_fadeLeft,{
+  from{
+    left: 0%;
+  }
+  to{
+    left: -100%;
+  }
+});
+
+img[preloading-image]{
+  display: none;
+}
+
+.story{
+  &[story-id="story01test"]{
+    width: 600px;
+    .plan{
+      &.start{
+      }
+      &.stop{
+      }
+      .element{
+      }
+      .button{
+        &.back{
+          right: auto;
+          left: 0%;
+        }
+        .create-animation(waiting_button,{
+          from{
+            margin-left: -10px;
+          }
+          to{
+            margin-left: 10px;
+          }
+        });
+        .animation(waiting_button 0.05s infinite);
+        &[ready="1"]{
+          .animation(none);
+          background: blue;
+        }
+      }
+      &[plan-id="p01"]{
+        .element[element-id="perso"]{
+          background-image: url("../images/01.jpg");
+        }
+      }
+      &[plan-id="p02"]{
+        .element[element-id="perso"]{
+          background-image: url("../images/02.jpg");
+        }
+      }
+      &[plan-id="p03"]{
+        .element[element-id="perso"]{
+          background-image: url("../images/03.jpg");
+        }
+      }
+      &[plan-id="p04"]{
+        .element[element-id="perso"]{
+          background-image: url("../images/04.jpg");
+        }
+      }
+      &[plan-id="p05"]{
+        .element[element-id="perso"]{
+          background-image: url("../images/05.jpg");
+        }
+      }
+      &[plan-id="p06"]{
+        .element[element-id="perso"]{
+          background-image: url("../images/06.jpg");
+        }
+      }
+      &[plan-id="p07"]{
+        .element[element-id="perso"]{
+          background-image: url("../images/07.jpg");
+        }
+      }
+    }
+  }
+}
