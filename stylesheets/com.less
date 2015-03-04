@@ -22,14 +22,29 @@
   }
 });
 
+// utils
+.box-sizing(@value){
+  -webkit-box-sizing: @value;
+     -moz-box-sizing: @value;
+      -ms-box-sizing: @value;
+       -o-box-sizing: @value;
+          box-sizing: @value;
+}
+
+[image-src-preload]{
+  display: none;
+}
+
 img[preloading-image]{
   display: none;
 }
 
 .story{
+  *{ .box-sizing(border-box); }
   position: relative;
   overflow: hidden;
   max-width: 100%;
+  color: #111;
   .plan{
     display: none;
     z-index: 0;
@@ -43,7 +58,7 @@ img[preloading-image]{
       z-index: 2;
     }
     &.stop{
-      display: block;
+      display: none;
       z-index: 1;
     }
     .element{
@@ -54,12 +69,23 @@ img[preloading-image]{
       height: 100%;
       background-size: 100% 100%;
     }
+    .ball{
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: auto;
+      z-index: 990;
+      background: #fff;
+      padding: 3%;
+    }
     .button{
       position: absolute;
       bottom: 0%;
       right: 0%;
       width: 15%;
       height: 5%;
+      z-index: 1000;
     }
   }
 }

@@ -22,6 +22,9 @@
     left: -100%;
   }
 }
+[image-src-preload] {
+  display: none;
+}
 img[preloading-image] {
   display: none;
 }
@@ -29,6 +32,14 @@ img[preloading-image] {
   position: relative;
   overflow: hidden;
   max-width: 100%;
+  color: #111;
+}
+.story * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .story .plan {
   display: none;
@@ -44,7 +55,7 @@ img[preloading-image] {
   z-index: 2;
 }
 .story .plan.stop {
-  display: block;
+  display: none;
   z-index: 1;
 }
 .story .plan .element {
@@ -55,10 +66,21 @@ img[preloading-image] {
   height: 100%;
   background-size: 100% 100%;
 }
+.story .plan .ball {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: auto;
+  z-index: 990;
+  background: #fff;
+  padding: 3%;
+}
 .story .plan .button {
   position: absolute;
   bottom: 0%;
   right: 0%;
   width: 15%;
   height: 5%;
+  z-index: 1000;
 }

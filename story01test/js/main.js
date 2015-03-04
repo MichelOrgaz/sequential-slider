@@ -3,8 +3,8 @@
   $(document).ready(function() {
     return $('.story').each(function() {
       var story;
-      console.log("coucou");
-      return story = new StoryInterface($(this), 'p01');
+      story = new StoryInterface($(this), 'p01');
+      return story.startStory();
     });
   });
 

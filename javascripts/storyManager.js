@@ -154,7 +154,7 @@
       this.domElement = domElement;
       this.firstPlan_id = firstPlan_id;
       this.imagePreloader = new ImagePreloader();
-      this.initImagePreloader();
+      this.initPlans();
       this.bindButtons();
       this.bindRatioWH();
       this.preloadPlan(this.firstPlan_id);
@@ -164,11 +164,14 @@
       this.stopPlanAllEvents = function() {};
     }
 
-    StoryInterface.prototype.initImagePreloader = function() {
+    StoryInterface.prototype.initPlans = function() {
       var that;
       that = this;
       return this.domElement.find('.plan[plan-id]').each(function() {
         var plan, plan_id;
+        $(this).flowtype({
+          fontRatio: 30
+        });
         plan_id = $(this).attr('plan-id');
         plan = {};
         if (plan_id != null) {
@@ -342,4 +345,4 @@
 
 }).call(this);
 
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=storyManager.js.map

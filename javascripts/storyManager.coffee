@@ -94,7 +94,7 @@
   class StoryInterface
     constructor: (@domElement, @firstPlan_id) ->
       @imagePreloader = new ImagePreloader()
-      @initImagePreloader()
+      @initPlans()
       @bindButtons()
       @bindRatioWH()
       @preloadPlan(@firstPlan_id)
@@ -103,10 +103,12 @@
       @stopPlanEvents = {}
       @stopPlanAllEvents = ->
     # init all images and plans to preload
-    initImagePreloader: ->
+    initPlans: ->
       # get all plans
       that = @
       @domElement.find('.plan[plan-id]').each ->
+        #flowtype
+        $(@).flowtype(fontRatio : 30)
         plan_id = $(@).attr('plan-id')
         plan = {}
         if plan_id?

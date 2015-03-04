@@ -11,7 +11,8 @@
 
     <!-- javascript (engine) -->
     <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../javascripts/app.js"></script>
+    <script type="text/javascript" src="../bower_components/flowtype/flowtype.js"></script>
+    <script type="text/javascript" src="../javascripts/storyManager.js"></script>
     <!-- javascript (specific) -->
     <script type="text/javascript" src="js/main.js"></script>
 
@@ -22,36 +23,46 @@
 
 <div id="story01Test" class="story" story-id="story01test" ratio-wh="1">
     <div class="plan" plan-id="p01">
-        <div class="element" element-id="perso" image-src-preload="images/01.jpg"></div>
+        <span image-src-preload="images/01/window.png"></span>
+        <span image-src-preload="images/01/scene01.png"></span>
+        <div class="element" element-id="window"></div>
+        <div class="element" element-id="scene01"></div>
+        <div class="ball" ball-id="bulle01">...</div>
         <div class="button" goto-plan="p02"></div>
     </div>
     <div class="plan" plan-id="p02">
-        <div class="element" element-id="perso" image-src-preload="images/02.jpg"></div>
+        <span image-src-preload="images/02.jpg"></span>
+        <div class="element" element-id="perso"></div>
         <div class="button back" goto-plan="p01"></div>
         <div class="button" goto-plan="p03"></div>
     </div>
     <div class="plan" plan-id="p03">
-        <div class="element" element-id="perso" image-src-preload="images/03.jpg"></div>
+        <span image-src-preload="images/03.jpg"></span>
+        <div class="element" element-id="perso"></div>
         <div class="button back" goto-plan="p02"></div>
         <div class="button" goto-plan="p04"></div>
     </div>
     <div class="plan" plan-id="p04">
-        <div class="element" element-id="perso" image-src-preload="images/04.jpg"></div>
+        <span image-src-preload="images/04.jpg"></span>
+        <div class="element" element-id="perso"></div>
         <div class="button back" goto-plan="p03"></div>
         <div class="button" goto-plan="p05"></div>
     </div>
     <div class="plan" plan-id="p05">
-        <div class="element" element-id="perso" image-src-preload="images/05.jpg"></div>
+        <span image-src-preload="images/05.jpg"></span>
+        <div class="element" element-id="perso"></div>
         <div class="button back" goto-plan="p04"></div>
         <div class="button" goto-plan="p06"></div>
     </div>
     <div class="plan" plan-id="p06">
-        <div class="element" element-id="perso" image-src-preload="images/06.jpg"></div>
+        <span image-src-preload="images/06.jpg"></span>
+        <div class="element" element-id="perso"></div>
         <div class="button back" goto-plan="p05"></div>
         <div class="button" goto-plan="p07"></div>
     </div>
     <div class="plan" plan-id="p07">
-        <div class="element" element-id="perso" image-src-preload="images/07.jpg"></div>
+        <span image-src-preload="images/07.jpg"></span>
+        <div class="element" element-id="perso"></div>
         <div class="button back" goto-plan="p06"></div>
     </div>
 </div>

@@ -22,11 +22,16 @@
     left: -100%;
   }
 }
-img[preloading-image] {
-  display: none;
-}
 .story[story-id="story01test"] {
   width: 600px;
+}
+.story[story-id="story01test"] .plan .ball {
+  -webkit-border-radius: 0.4em;
+  -moz-border-radius: 0.4em;
+  -ms-border-radius: 0.4em;
+  -o-border-radius: 0.4em;
+  border-radius: 0.4em;
+  font-size: 2em;
 }
 .story[story-id="story01test"] .plan .button {
   -webkit-animation: waiting_button 0.05s infinite;
@@ -67,8 +72,90 @@ img[preloading-image] {
   animation: none;
   background: blue;
 }
-.story[story-id="story01test"] .plan[plan-id="p01"] .element[element-id="perso"] {
-  background-image: url("../images/01.jpg");
+.story[story-id="story01test"] .plan[plan-id="p01"] .element[element-id="window"] {
+  background-image: url("../images/01/window.png");
+  z-index: 1;
+  -webkit-animation: floating ease-in-out 3s infinite;
+  -moz-animation: floating ease-in-out 3s infinite;
+  animation: floating ease-in-out 3s infinite;
+}
+@-webkit-keyframes floating {
+  from {
+    margin-top: -1%;
+  }
+  50% {
+    margin-top: 1%;
+  }
+  to {
+    margin-top: -1%;
+  }
+}
+@-moz-keyframes floating {
+  from {
+    margin-top: -1%;
+  }
+  50% {
+    margin-top: 1%;
+  }
+  to {
+    margin-top: -1%;
+  }
+}
+@keyframes floating {
+  from {
+    margin-top: -1%;
+  }
+  50% {
+    margin-top: 1%;
+  }
+  to {
+    margin-top: -1%;
+  }
+}
+.story[story-id="story01test"] .plan[plan-id="p01"] .element[element-id="scene01"] {
+  background-image: url("../images/01/scene01.png");
+  -webkit-animation: blink linear 3s infinite;
+  -moz-animation: blink linear 3s infinite;
+  animation: blink linear 3s infinite;
+}
+@-webkit-keyframes blink {
+  0% {
+    background-image: url("../images/01/scene01.png");
+  }
+  2% {
+    background-image: url("../images/01/scene02.png");
+  }
+  4% {
+    background-image: url("../images/01/scene01.png");
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    background-image: url("../images/01/scene01.png");
+  }
+  2% {
+    background-image: url("../images/01/scene02.png");
+  }
+  4% {
+    background-image: url("../images/01/scene01.png");
+  }
+}
+@keyframes blink {
+  0% {
+    background-image: url("../images/01/scene01.png");
+  }
+  2% {
+    background-image: url("../images/01/scene02.png");
+  }
+  4% {
+    background-image: url("../images/01/scene01.png");
+  }
+}
+.story[story-id="story01test"] .plan[plan-id="p01"] .ball[ball-id="bulle01"] {
+  left: 4%;
+  top: 60%;
+  width: auto;
+  height: auto;
 }
 .story[story-id="story01test"] .plan[plan-id="p02"] .element[element-id="perso"] {
   background-image: url("../images/02.jpg");

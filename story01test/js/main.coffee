@@ -2,7 +2,6 @@ $(document).ready ->
 
   $('.story').each ->
 
-    console.log "coucou"
     story = new StoryInterface($(@), 'p01')
 
     # !test! d'event au changement de plan
@@ -23,4 +22,4 @@ $(document).ready ->
     #story.onStopPlan 'plan002', ->
     #  console.log 'fin plan 002'
 
-    #story.startStory()
+    story.startStory()

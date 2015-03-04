@@ -22,8 +22,13 @@
   }
 });
 
-img[preloading-image]{
-  display: none;
+// utils
+.border-radius(@value){
+  -webkit-border-radius: @value;
+  -moz-border-radius: @value;
+  -ms-border-radius: @value;
+  -o-border-radius: @value;
+  border-radius: @value;
 }
 
 .story{
@@ -35,6 +40,10 @@ img[preloading-image]{
       &.stop{
       }
       .element{
+      }
+      .ball{
+        .border-radius(0.4em);
+        font-size: 2em;
       }
       .button{
         &.back{
@@ -56,8 +65,35 @@ img[preloading-image]{
         }
       }
       &[plan-id="p01"]{
-        .element[element-id="perso"]{
-          background-image: url("../images/01.jpg");
+        .element{
+          &[element-id="window"]{
+            background-image: url("../images/01/window.png");
+            z-index: 1;
+            .create-animation(floating,{
+              from{ margin-top: -1%; }
+              50%{ margin-top: 1%; }
+              to{ margin-top: -1%; }
+            });
+            .animation(floating ease-in-out 3s infinite);
+          }
+          &[element-id="scene01"]{
+            background-image: url("../images/01/scene01.png");
+            .create-animation(blink,{
+            0%{ background-image: url("../images/01/scene01.png"); }
+            2%{ background-image: url("../images/01/scene02.png"); }
+            4%{ background-image: url("../images/01/scene01.png"); }
+            to{  }
+            });
+            .animation(blink linear 3s infinite);
+          }
+        }
+        .ball{
+          &[ball-id="bulle01"]{
+            left: 4%;
+            top: 60%;
+            width: auto;
+            height: auto;
+          }
         }
       }
       &[plan-id="p02"]{

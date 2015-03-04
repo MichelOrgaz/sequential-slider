@@ -7,7 +7,7 @@
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/javascripts/app.js" />
+      <root url="file://$PROJECT_DIR$/javascripts/storyManager.js" />
       <root url="file://$PROJECT_DIR$/story01test/js/main.js" />
     </CLASSES>
     <SOURCES />
