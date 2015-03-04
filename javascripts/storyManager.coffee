@@ -107,8 +107,6 @@
       # get all plans
       that = @
       @domElement.find('.plan[plan-id]').each ->
-        #flowtype
-        $(@).flowtype(fontRatio : 30)
         plan_id = $(@).attr('plan-id')
         plan = {}
         if plan_id?

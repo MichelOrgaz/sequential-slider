@@ -2,7 +2,7 @@ $(document).ready ->
 
   $('.story').each ->
 
-    story = new StoryInterface($(@), 'p01')
+    story = new StoryInterface($(@), 'p00')
 
     # !test! d'event au changement de plan
     #story.onStopPlan 'plan001', ->
@@ -21,5 +21,10 @@ $(document).ready ->
 
     #story.onStopPlan 'plan002', ->
     #  console.log 'fin plan 002'
+
+
+    $(@).find('.plan[plan-id]').each ->
+      #flowtype
+      $(@).flowtype(fontRatio : 30)
 
     story.startStory()

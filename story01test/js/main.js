@@ -3,7 +3,12 @@
   $(document).ready(function() {
     return $('.story').each(function() {
       var story;
-      story = new StoryInterface($(this), 'p01');
+      story = new StoryInterface($(this), 'p00');
+      $(this).find('.plan[plan-id]').each(function() {
+        return $(this).flowtype({
+          fontRatio: 30
+        });
+      });
       return story.startStory();
     });
   });

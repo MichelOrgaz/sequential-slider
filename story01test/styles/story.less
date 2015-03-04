@@ -56,22 +56,49 @@
         line-height: 1.1em;
       }
       .button{
+        background: gray;
+        text-align: center;
+        height: auto;
+        padding: 1%;
+        font-size: 2em;
+        width: 11%;
+        bottom: 1%;
+        right: 1%;
+        &:after{
+          content: "...";
+        }
+        &[ready="1"]{
+          background: rgb(0, 199, 10);;
+          &:after{
+            content: ">";
+          }
+        }
         &.back{
           right: auto;
-          left: 0%;
+          left: 1%;
+          &:after{
+            content: "<";
+          }
         }
-        .create-animation(waiting_button,{
-          from{
-            margin-left: -10px;
+      }
+      &[plan-id="p00"] {
+        .button{
+          bottom: 0%;
+          right: 0%;
+          width: 100%;
+          height: 100%;
+          background: #252525;
+          color: #fff;
+          line-height: 1500%;
+          &:after{
+            content: " (chargement)";
           }
-          to{
-            margin-left: 10px;
+          &[ready="1"] {
+            &:after{
+              content: "";
+            }
+
           }
-        });
-        .animation(waiting_button 0.05s infinite);
-        &[ready="1"]{
-          .animation(none);
-          background: blue;
         }
       }
       &[plan-id="p01"]{

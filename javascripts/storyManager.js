@@ -169,9 +169,6 @@
       that = this;
       return this.domElement.find('.plan[plan-id]').each(function() {
         var plan, plan_id;
-        $(this).flowtype({
-          fontRatio: 30
-        });
         plan_id = $(this).attr('plan-id');
         plan = {};
         if (plan_id != null) {

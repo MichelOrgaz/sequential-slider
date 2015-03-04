@@ -85,3 +85,6 @@ img[preloading-image] {
   height: 5%;
   z-index: 1000;
 }
+.story .plan .button[ready="1"] {
+  cursor: pointer;
+}
