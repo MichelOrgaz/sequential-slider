@@ -22,16 +22,52 @@
     left: -100%;
   }
 }
+@-webkit-keyframes display_after_delay {
+  from {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes display_after_delay {
+  from {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes display_after_delay {
+  from {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .story[story-id="story01test"] {
-  width: 600px;
+  width: 800px;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
 }
 .story[story-id="story01test"] .plan .ball {
-  -webkit-border-radius: 0.4em;
-  -moz-border-radius: 0.4em;
-  -ms-border-radius: 0.4em;
-  -o-border-radius: 0.4em;
-  border-radius: 0.4em;
-  font-size: 2em;
+  -webkit-border-radius: 0.8em;
+  -moz-border-radius: 0.8em;
+  -ms-border-radius: 0.8em;
+  -o-border-radius: 0.8em;
+  border-radius: 0.8em;
+  font-size: 1em;
+  line-height: 1.1em;
 }
 .story[story-id="story01test"] .plan .button {
   -webkit-animation: waiting_button 0.05s infinite;
@@ -75,50 +111,77 @@
 .story[story-id="story01test"] .plan[plan-id="p01"] .element[element-id="window"] {
   background-image: url("../images/01/window.png");
   z-index: 1;
-  -webkit-animation: floating ease-in-out 3s infinite;
-  -moz-animation: floating ease-in-out 3s infinite;
-  animation: floating ease-in-out 3s infinite;
+  -webkit-animation: p01_floating ease-in-out 3s infinite;
+  -moz-animation: p01_floating ease-in-out 3s infinite;
+  animation: p01_floating ease-in-out 3s infinite;
 }
-@-webkit-keyframes floating {
+@-webkit-keyframes p01_floating {
   from {
     margin-top: -1%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.8;
   }
   50% {
     margin-top: 1%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
   }
   to {
     margin-top: -1%;
+    opacity: 1;
   }
 }
-@-moz-keyframes floating {
+@-moz-keyframes p01_floating {
   from {
     margin-top: -1%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.8;
   }
   50% {
     margin-top: 1%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
   }
   to {
     margin-top: -1%;
+    opacity: 1;
   }
 }
-@keyframes floating {
+@keyframes p01_floating {
   from {
     margin-top: -1%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.8;
   }
   50% {
     margin-top: 1%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
   }
   to {
     margin-top: -1%;
+    opacity: 1;
   }
 }
 .story[story-id="story01test"] .plan[plan-id="p01"] .element[element-id="scene01"] {
   background-image: url("../images/01/scene01.png");
-  -webkit-animation: blink linear 3s infinite;
-  -moz-animation: blink linear 3s infinite;
-  animation: blink linear 3s infinite;
+  -webkit-animation: p01_blink linear 3s infinite;
+  -moz-animation: p01_blink linear 3s infinite;
+  animation: p01_blink linear 3s infinite;
 }
-@-webkit-keyframes blink {
+@-webkit-keyframes p01_blink {
   0% {
     background-image: url("../images/01/scene01.png");
   }
@@ -129,7 +192,7 @@
     background-image: url("../images/01/scene01.png");
   }
 }
-@-moz-keyframes blink {
+@-moz-keyframes p01_blink {
   0% {
     background-image: url("../images/01/scene01.png");
   }
@@ -140,7 +203,7 @@
     background-image: url("../images/01/scene01.png");
   }
 }
-@keyframes blink {
+@keyframes p01_blink {
   0% {
     background-image: url("../images/01/scene01.png");
   }
@@ -156,9 +219,133 @@
   top: 60%;
   width: auto;
   height: auto;
+  -webkit-animation: display_after_delay linear 1s;
+  -moz-animation: display_after_delay linear 1s;
+  animation: display_after_delay linear 1s;
 }
-.story[story-id="story01test"] .plan[plan-id="p02"] .element[element-id="perso"] {
-  background-image: url("../images/02.jpg");
+.story[story-id="story01test"] .plan[plan-id="p02"] .element[element-id="window"] {
+  background-image: url("../images/02/window.png");
+  z-index: 1;
+  -webkit-animation: p02_floating ease-in-out 3s infinite;
+  -moz-animation: p02_floating ease-in-out 3s infinite;
+  animation: p02_floating ease-in-out 3s infinite;
+}
+@-webkit-keyframes p02_floating {
+  from {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    margin-top: 0.6%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  to {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+}
+@-moz-keyframes p02_floating {
+  from {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    margin-top: 0.6%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  to {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+}
+@keyframes p02_floating {
+  from {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    margin-top: 0.6%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  to {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+}
+.story[story-id="story01test"] .plan[plan-id="p02"] .element[element-id="scene01"] {
+  background-image: url("../images/02/scene01.png");
+  -webkit-animation: p02_blink linear 3s infinite;
+  -moz-animation: p02_blink linear 3s infinite;
+  animation: p02_blink linear 3s infinite;
+}
+@-webkit-keyframes p02_blink {
+  0% {
+    background-image: url("../images/02/scene01.png");
+  }
+  2% {
+    background-image: url("../images/02/scene02.png");
+  }
+  4% {
+    background-image: url("../images/02/scene01.png");
+  }
+}
+@-moz-keyframes p02_blink {
+  0% {
+    background-image: url("../images/02/scene01.png");
+  }
+  2% {
+    background-image: url("../images/02/scene02.png");
+  }
+  4% {
+    background-image: url("../images/02/scene01.png");
+  }
+}
+@keyframes p02_blink {
+  0% {
+    background-image: url("../images/02/scene01.png");
+  }
+  2% {
+    background-image: url("../images/02/scene02.png");
+  }
+  4% {
+    background-image: url("../images/02/scene01.png");
+  }
+}
+.story[story-id="story01test"] .plan[plan-id="p02"] .ball[ball-id="bulle01"] {
+  left: 53%;
+  top: 25%;
+  width: auto;
+  height: auto;
+  -webkit-animation: display_after_delay linear 1s;
+  -moz-animation: display_after_delay linear 1s;
+  animation: display_after_delay linear 1s;
+}
+.story[story-id="story01test"] .plan[plan-id="p02"] .ball[ball-id="bulle02"] {
+  left: 10%;
+  top: 49%;
+  width: 30%;
+  height: auto;
+  -webkit-animation: display_after_delay linear 2.5s;
+  -moz-animation: display_after_delay linear 2.5s;
+  animation: display_after_delay linear 2.5s;
 }
 .story[story-id="story01test"] .plan[plan-id="p03"] .element[element-id="perso"] {
   background-image: url("../images/03.jpg");

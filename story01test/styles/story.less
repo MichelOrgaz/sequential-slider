@@ -22,6 +22,13 @@
   }
 });
 
+// standard animations
+.create-animation(display_after_delay,{
+  from{ opacity: 0; }
+  99%{ opacity: 0; }
+  to{ opacity: 1; }
+});
+
 // utils
 .border-radius(@value){
   -webkit-border-radius: @value;
@@ -33,7 +40,9 @@
 
 .story{
   &[story-id="story01test"]{
-    width: 600px;
+    width: 800px;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
     .plan{
       &.start{
       }
@@ -42,8 +51,9 @@
       .element{
       }
       .ball{
-        .border-radius(0.4em);
-        font-size: 2em;
+        .border-radius(0.8em);
+        font-size: 1em;
+        line-height: 1.1em;
       }
       .button{
         &.back{
@@ -69,22 +79,24 @@
           &[element-id="window"]{
             background-image: url("../images/01/window.png");
             z-index: 1;
-            .create-animation(floating,{
-              from{ margin-top: -1%; }
-              50%{ margin-top: 1%; }
-              to{ margin-top: -1%; }
+            .create-animation(p01_floating,{
+              from{ margin-top: -1%; opacity: 1 }
+              25%{ opacity: 0.8 }
+              50%{ margin-top: 1%; opacity: 1 }
+              75%{ opacity: 0.8 }
+              to{ margin-top: -1%; opacity: 1 }
             });
-            .animation(floating ease-in-out 3s infinite);
+            .animation(p01_floating ease-in-out 3s infinite);
           }
           &[element-id="scene01"]{
             background-image: url("../images/01/scene01.png");
-            .create-animation(blink,{
+            .create-animation(p01_blink,{
             0%{ background-image: url("../images/01/scene01.png"); }
             2%{ background-image: url("../images/01/scene02.png"); }
             4%{ background-image: url("../images/01/scene01.png"); }
             to{  }
             });
-            .animation(blink linear 3s infinite);
+            .animation(p01_blink linear 3s infinite);
           }
         }
         .ball{
@@ -93,12 +105,50 @@
             top: 60%;
             width: auto;
             height: auto;
+            .animation(display_after_delay linear 1s);
           }
         }
       }
       &[plan-id="p02"]{
-        .element[element-id="perso"]{
-          background-image: url("../images/02.jpg");
+        .element{
+          &[element-id="window"]{
+            background-image: url("../images/02/window.png");
+            z-index: 1;
+            .create-animation(p02_floating,{
+            from{ margin-top: -0.6%; opacity: 1 }
+            25%{ opacity: 0.8 }
+            50%{ margin-top: 0.6%; opacity: 1 }
+            75%{ opacity: 0.8 }
+            to{ margin-top: -0.6%; opacity: 1 }
+            });
+            .animation(p02_floating ease-in-out 3s infinite);
+          }
+          &[element-id="scene01"]{
+            background-image: url("../images/02/scene01.png");
+            .create-animation(p02_blink,{
+            0%{ background-image: url("../images/02/scene01.png"); }
+            2%{ background-image: url("../images/02/scene02.png"); }
+            4%{ background-image: url("../images/02/scene01.png"); }
+            to{  }
+            });
+            .animation(p02_blink linear 3s infinite);
+          }
+        }
+        .ball{
+          &[ball-id="bulle01"]{
+            left: 53%;
+            top: 25%;
+            width: auto;
+            height: auto;
+            .animation(display_after_delay linear 1s);
+          }
+          &[ball-id="bulle02"]{
+            left: 10%;
+            top: 49%;
+            width: 30%;
+            height: auto;
+            .animation(display_after_delay linear 2.5s);
+          }
         }
       }
       &[plan-id="p03"]{

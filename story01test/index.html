@@ -1,6 +1,7 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
+    <meta charset="UTF-8">
     <title>Story01test - StoryManager Beta</title>
     <link rel="stylesheet" href="styles/style.css">
 
@@ -8,6 +9,7 @@
     <link rel="stylesheet"  href="../stylesheets/com.css">
     <!-- styles (specific) -->
     <link rel="stylesheet"  href="styles/story.css">
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 
     <!-- javascript (engine) -->
     <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
@@ -23,18 +25,26 @@
 
 <div id="story01Test" class="story" story-id="story01test" ratio-wh="1">
     <div class="plan" plan-id="p01">
-        <span image-src-preload="images/01/window.png"></span>
-        <span image-src-preload="images/01/scene01.png"></span>
         <div class="element" element-id="window"></div>
         <div class="element" element-id="scene01"></div>
         <div class="ball" ball-id="bulle01">...</div>
         <div class="button" goto-plan="p02"></div>
+        <!-- preload -->
+        <span image-src-preload="images/01/window.png"></span>
+        <span image-src-preload="images/01/scene01.png"></span>
+        <span image-src-preload="images/01/scene02.png"></span>
     </div>
     <div class="plan" plan-id="p02">
-        <span image-src-preload="images/02.jpg"></span>
-        <div class="element" element-id="perso"></div>
+        <div class="element" element-id="window"></div>
+        <div class="element" element-id="scene01"></div>
+        <div class="ball" ball-id="bulle01">mise à jour...</div>
+        <div class="ball" ball-id="bulle02">il y en a encore pour un bon moment</div>
         <div class="button back" goto-plan="p01"></div>
         <div class="button" goto-plan="p03"></div>
+        <!-- preload -->
+        <span image-src-preload="images/02/window.png"></span>
+        <span image-src-preload="images/02/scene01.png"></span>
+        <span image-src-preload="images/02/scene02.png"></span>
     </div>
     <div class="plan" plan-id="p03">
         <span image-src-preload="images/03.jpg"></span>

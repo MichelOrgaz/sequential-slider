@@ -33,6 +33,7 @@ img[preloading-image] {
   overflow: hidden;
   max-width: 100%;
   color: #111;
+  text-transform: uppercase;
 }
 .story * {
   -webkit-box-sizing: border-box;
@@ -74,7 +75,7 @@ img[preloading-image] {
   height: auto;
   z-index: 990;
   background: #fff;
-  padding: 3%;
+  padding: 2.4% 2.4% 2% 2.4%;
 }
 .story .plan .button {
   position: absolute;
