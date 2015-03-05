@@ -349,8 +349,85 @@
   -moz-animation: display_after_delay linear 2.5s;
   animation: display_after_delay linear 2.5s;
 }
-.story[story-id="story01test"] .plan[plan-id="p03"] .element[element-id="perso"] {
-  background-image: url("../images/03.jpg");
+.story[story-id="story01test"] .plan[plan-id="p03"] .element[element-id="window"] {
+  background-image: url("../images/03/window.png");
+  z-index: 1;
+  left: 20%;
+  -webkit-animation: p03_floating ease-in-out 3s infinite;
+  -moz-animation: p03_floating ease-in-out 3s infinite;
+  animation: p03_floating ease-in-out 3s infinite;
+}
+@-webkit-keyframes p03_floating {
+  from {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    margin-top: 0.6%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  to {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+}
+@-moz-keyframes p03_floating {
+  from {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    margin-top: 0.6%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  to {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+}
+@keyframes p03_floating {
+  from {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    margin-top: 0.6%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  to {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+}
+.story[story-id="story01test"] .plan[plan-id="p03"] .element[element-id="scene01"] {
+  background-image: url("../images/03/scene.png");
+}
+.story[story-id="story01test"] .plan[plan-id="p03"] .ball[ball-id="bulle01"] {
+  left: 3%;
+  top: 2%;
+  width: 80%;
+  height: auto;
+  -webkit-animation: display_after_delay linear 1s;
+  -moz-animation: display_after_delay linear 1s;
+  animation: display_after_delay linear 1s;
 }
 .story[story-id="story01test"] .plan[plan-id="p04"] .element[element-id="perso"] {
   background-image: url("../images/04.jpg");

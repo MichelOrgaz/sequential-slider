@@ -179,8 +179,32 @@
         }
       }
       &[plan-id="p03"]{
-        .element[element-id="perso"]{
-          background-image: url("../images/03.jpg");
+        .element{
+          &[element-id="window"]{
+            background-image: url("../images/03/window.png");
+            z-index: 1;
+            left:20%;
+            .create-animation(p03_floating,{
+            from{ margin-top: -0.6%; opacity: 1 }
+            25%{ opacity: 0.8 }
+            50%{ margin-top: 0.6%; opacity: 1 }
+            75%{ opacity: 0.8 }
+            to{ margin-top: -0.6%; opacity: 1 }
+            });
+            .animation(p03_floating ease-in-out 3s infinite);
+          }
+          &[element-id="scene01"]{
+            background-image: url("../images/03/scene.png");
+          }
+        }
+        .ball{
+          &[ball-id="bulle01"]{
+            left: 3%;
+            top: 2%;
+            width: 80%;
+            height: auto;
+            .animation(display_after_delay linear 1s);
+          }
         }
       }
       &[plan-id="p04"]{
