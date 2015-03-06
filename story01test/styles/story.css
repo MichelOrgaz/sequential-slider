@@ -104,11 +104,17 @@
   color: #fff;
   line-height: 1500%;
 }
-.story[story-id="story01test"] .plan[plan-id="p00"] .button:after {
-  content: " (chargement)";
+.story[story-id="story01test"] .plan[plan-id="p00"] .button .loading {
+  display: block;
 }
-.story[story-id="story01test"] .plan[plan-id="p00"] .button[ready="1"]:after {
-  content: "";
+.story[story-id="story01test"] .plan[plan-id="p00"] .button .ready {
+  display: none;
+}
+.story[story-id="story01test"] .plan[plan-id="p00"] .button[ready="1"] .loading {
+  display: none;
+}
+.story[story-id="story01test"] .plan[plan-id="p00"] .button[ready="1"] .ready {
+  display: block;
 }
 .story[story-id="story01test"] .plan[plan-id="p01"] .element[element-id="window"] {
   background-image: url("../images/01/window.png");
@@ -345,9 +351,9 @@
   top: 49%;
   width: 30%;
   height: auto;
-  -webkit-animation: display_after_delay linear 2.5s;
-  -moz-animation: display_after_delay linear 2.5s;
-  animation: display_after_delay linear 2.5s;
+  -webkit-animation: display_after_delay linear 1.5s;
+  -moz-animation: display_after_delay linear 1.5s;
+  animation: display_after_delay linear 1.5s;
 }
 .story[story-id="story01test"] .plan[plan-id="p03"] .element[element-id="window"] {
   background-image: url("../images/03/window.png");
@@ -429,15 +435,216 @@
   -moz-animation: display_after_delay linear 1s;
   animation: display_after_delay linear 1s;
 }
-.story[story-id="story01test"] .plan[plan-id="p04"] .element[element-id="perso"] {
-  background-image: url("../images/04.jpg");
+.story[story-id="story01test"] .plan[plan-id="p04"] {
+  background: #222;
 }
-.story[story-id="story01test"] .plan[plan-id="p05"] .element[element-id="perso"] {
-  background-image: url("../images/05.jpg");
+.story[story-id="story01test"] .plan[plan-id="p04"] .element[element-id="explication"] {
+  background: #fff;
+  padding: 1%;
+  width: auto;
+  height: auto;
+  left: 1%;
+  top: 1%;
 }
-.story[story-id="story01test"] .plan[plan-id="p06"] .element[element-id="perso"] {
-  background-image: url("../images/06.jpg");
+.story[story-id="story01test"] .plan[plan-id="p04"] .element[element-id="window01"] {
+  background-image: url("../images/04/window1.png");
+  z-index: 1;
+  -webkit-animation: p04_floating ease-in-out 3s infinite;
+  -moz-animation: p04_floating ease-in-out 3s infinite;
+  animation: p04_floating ease-in-out 3s infinite;
 }
-.story[story-id="story01test"] .plan[plan-id="p07"] .element[element-id="perso"] {
-  background-image: url("../images/07.jpg");
+@-webkit-keyframes p04_floating {
+  from {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    margin-top: 0.6%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  to {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+}
+@-moz-keyframes p04_floating {
+  from {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    margin-top: 0.6%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  to {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+}
+@keyframes p04_floating {
+  from {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    margin-top: 0.6%;
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  to {
+    margin-top: -0.6%;
+    opacity: 1;
+  }
+}
+.story[story-id="story01test"] .plan[plan-id="p04"] .element[element-id="window02"] {
+  background-image: url("../images/04/window2.png");
+  z-index: 1;
+  -webkit-animation: p04_floating2 ease-in-out 1s infinite;
+  -moz-animation: p04_floating2 ease-in-out 1s infinite;
+  animation: p04_floating2 ease-in-out 1s infinite;
+}
+@-webkit-keyframes p04_floating2 {
+  from {
+    margin-top: -0.3%;
+    opacity: 1;
+  }
+  50% {
+    margin-top: 0.3%;
+    opacity: 1;
+  }
+  to {
+    margin-top: -0.3%;
+    opacity: 1;
+  }
+}
+@-moz-keyframes p04_floating2 {
+  from {
+    margin-top: -0.3%;
+    opacity: 1;
+  }
+  50% {
+    margin-top: 0.3%;
+    opacity: 1;
+  }
+  to {
+    margin-top: -0.3%;
+    opacity: 1;
+  }
+}
+@keyframes p04_floating2 {
+  from {
+    margin-top: -0.3%;
+    opacity: 1;
+  }
+  50% {
+    margin-top: 0.3%;
+    opacity: 1;
+  }
+  to {
+    margin-top: -0.3%;
+    opacity: 1;
+  }
+}
+.story[story-id="story01test"] .plan[plan-id="p04"] .element[element-id="scene01wrap"] {
+  -webkit-animation: p04_appear linear 1s;
+  -moz-animation: p04_appear linear 1s;
+  animation: p04_appear linear 1s;
+}
+@-webkit-keyframes p04_appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes p04_appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes p04_appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.story[story-id="story01test"] .plan[plan-id="p04"] .element[element-id="scene01"] {
+  background-image: url("../images/04/scene01.png");
+  -webkit-animation: p04_blink linear 3s infinite;
+  -moz-animation: p04_blink linear 3s infinite;
+  animation: p04_blink linear 3s infinite;
+}
+@-webkit-keyframes p04_blink {
+  0% {
+    background-image: url("../images/04/scene01.png");
+  }
+  2% {
+    background-image: url("../images/04/scene02.png");
+  }
+  4% {
+    background-image: url("../images/04/scene01.png");
+  }
+}
+@-moz-keyframes p04_blink {
+  0% {
+    background-image: url("../images/04/scene01.png");
+  }
+  2% {
+    background-image: url("../images/04/scene02.png");
+  }
+  4% {
+    background-image: url("../images/04/scene01.png");
+  }
+}
+@keyframes p04_blink {
+  0% {
+    background-image: url("../images/04/scene01.png");
+  }
+  2% {
+    background-image: url("../images/04/scene02.png");
+  }
+  4% {
+    background-image: url("../images/04/scene01.png");
+  }
+}
+.story[story-id="story01test"] .plan[plan-id="p04"] .ball[ball-id="bulle01"] {
+  left: 12%;
+  top: 34%;
+  width: auto;
+  height: auto;
+  -webkit-animation: display_after_delay linear 1s;
+  -moz-animation: display_after_delay linear 1s;
+  animation: display_after_delay linear 1s;
 }

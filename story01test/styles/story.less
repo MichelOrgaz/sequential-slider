@@ -90,14 +90,19 @@
           background: #252525;
           color: #fff;
           line-height: 1500%;
-          &:after{
-            content: " (chargement)";
+          .loading{
+            display: block;
+          }
+          .ready{
+            display: none;
           }
           &[ready="1"] {
-            &:after{
-              content: "";
+            .loading{
+              display: none;
             }
-
+            .ready{
+              display: block;
+            }
           }
         }
       }
@@ -174,7 +179,7 @@
             top: 49%;
             width: 30%;
             height: auto;
-            .animation(display_after_delay linear 2.5s);
+            .animation(display_after_delay linear 1.5s);
           }
         }
       }
@@ -208,23 +213,65 @@
         }
       }
       &[plan-id="p04"]{
-        .element[element-id="perso"]{
-          background-image: url("../images/04.jpg");
+        background: #222;
+        .element{
+          &[element-id="explication"]{
+            background: #fff;
+            padding: 1%;
+            width: auto;
+            height: auto;
+            left: 1%;
+            top: 1%;
+          }
+          &[element-id="window01"]{
+            background-image: url("../images/04/window1.png");
+            z-index: 1;
+            .create-animation(p04_floating,{
+            from{ margin-top: -0.6%; opacity: 1 }
+            25%{ opacity: 0.8 }
+            50%{ margin-top: 0.6%; opacity: 1 }
+            75%{ opacity: 0.8 }
+            to{ margin-top: -0.6%; opacity: 1 }
+            });
+            .animation(p04_floating ease-in-out 3s infinite);
+          }
+          &[element-id="window02"]{
+            background-image: url("../images/04/window2.png");
+            z-index: 1;
+            .create-animation(p04_floating2,{
+            from{ margin-top: -0.3%; opacity: 1 }
+            50%{ margin-top: 0.3%; opacity: 1 }
+            to{ margin-top: -0.3%; opacity: 1 }
+            });
+            .animation(p04_floating2 ease-in-out 1s infinite);
+          }
+          &[element-id="scene01wrap"]{
+            .create-animation(p04_appear,{
+            0%{ opacity: 0 }
+            50%{ opacity: 0 }
+            100%{ opacity: 1 }
+            });
+            .animation(p04_appear linear 1s);
+          }
+          &[element-id="scene01"]{
+            background-image: url("../images/04/scene01.png");
+            .create-animation(p04_blink,{
+            0%{ background-image: url("../images/04/scene01.png"); }
+            2%{ background-image: url("../images/04/scene02.png"); }
+            4%{ background-image: url("../images/04/scene01.png"); }
+            to{  }
+            });
+            .animation(p04_blink linear 3s infinite);
+          }
         }
-      }
-      &[plan-id="p05"]{
-        .element[element-id="perso"]{
-          background-image: url("../images/05.jpg");
-        }
-      }
-      &[plan-id="p06"]{
-        .element[element-id="perso"]{
-          background-image: url("../images/06.jpg");
-        }
-      }
-      &[plan-id="p07"]{
-        .element[element-id="perso"]{
-          background-image: url("../images/07.jpg");
+        .ball{
+          &[ball-id="bulle01"]{
+            left: 12%;
+            top: 34%;
+            width: auto;
+            height: auto;
+            .animation(display_after_delay linear 1s);
+          }
         }
       }
     }
