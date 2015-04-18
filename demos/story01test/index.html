@@ -1,41 +1,35 @@
 <!doctype html>
-<html xmlns="http://www.w3.org/1999/html">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Mises à jour du système - StoryManager Beta</title>
-    <meta property="og:title" content="Mises à jour du système - StoryManager Beta" />
-    <meta property="og:site_name" content="Michel Orgaz Artworks"/>
-    <meta property="og:url" content="http://michelorgaz.com/works/comictest02/story01test/index.html" />
-    <meta property="og:description" content="Une mini BD interactive" />
-    <meta property="og:type" content="article" />
-    <meta property="og:image" content="http://michelorgaz.com/works/comictest02/story01test/images/01/scene01.png" />
-
+    <title>Mises à jour du système - Sequential-Slider Beta</title>
 
     <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 
     <!-- styles (engine) -->
-    <link rel="stylesheet"  href="../stylesheets/com.css">
+    <link rel="stylesheet"  href="../../stylesheets/base.css">
     <!-- styles (specific) -->
     <link rel="stylesheet"  href="styles/story.css">
     <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 
     <!-- javascript (engine) -->
-    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="../bower_components/flowtype/flowtype.js"></script>
-    <script type="text/javascript" src="../javascripts/storyManager.js"></script>
+    <script type="text/javascript" src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../../bower_components/flowtype/flowtype.js"></script>
+    <script type="text/javascript" src="../../javascripts/sequential-slider.js"></script>
     <!-- javascript (specific) -->
     <script type="text/javascript" src="js/main.js"></script>
 
 </head>
 <body>
 
-<h1>Mises à jour du système</h1>
+<h1>Responsive demo with images</h1>
 
-<div id="story01Test" class="story" story-id="story01test" ratio-wh="1">
+<div id="story01Test" class="story" image-frames story-id="story01test" ratio-wh="1">
     <div class="plan" plan-id="p00">
         <div class="button" goto-plan="p01">
-            <div class="loading">Chargement</div>
-            <div class="ready">Cliquer pour commencer</div>
+            <div class="loading">Loading</div>
+            <div class="ready">Click to start</div>
         </div>
     </div>
     <div class="plan" plan-id="p01">

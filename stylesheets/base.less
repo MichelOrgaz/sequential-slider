@@ -33,7 +33,7 @@
 
 [image-src-preload]{
   display: none;
-}
+} 
 
 img[preloading-image]{
   display: none;
@@ -41,54 +41,62 @@ img[preloading-image]{
 
 .story{
   *{ .box-sizing(border-box); }
-  position: relative;
-  overflow: hidden;
-  max-width: 100%;
-  color: #111;
-  text-transform: uppercase;
   .plan{
-    display: none;
-    z-index: 0;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    &.start{
-      display: block;
-      z-index: 2;
-    }
-    &.stop{
       display: none;
-      z-index: 1;
-    }
-    .element{
+      &.start{
+        display: block;
+      }
+      &.stop{
+        display: none;
+      }
+  }
+  &[image-frames]{
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    color: #111;
+    text-transform: uppercase;
+    .plan{
+      z-index: 0;
       position: absolute;
       top: 0%;
       left: 0%;
       width: 100%;
       height: 100%;
-      background-size: 100% 100%;
-    }
-    .ball{
-      position: absolute;
-      top: 0%;
-      left: 0%;
-      width: 100%;
-      height: auto;
-      z-index: 990;
-      background: #fff;
-      padding: 2.4% 2.4% 2% 2.4%;
-    }
-    .button{
-      position: absolute;
-      bottom: 0%;
-      right: 0%;
-      width: 15%;
-      height: 5%;
-      z-index: 1000;
-      &[ready="1"]{
-        cursor: pointer;
+      &.start{
+        z-index: 2;
+      }
+      &.stop{
+        z-index: 1;
+      }
+      .element{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-size: 100% 100%;
+      }
+      .ball{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: auto;
+        z-index: 990;
+        background: #fff;
+        padding: 2.4% 2.4% 2% 2.4%;
+      }
+      .button{
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+        width: 15%;
+        height: 5%;
+        z-index: 1000;
+        &[ready="1"]{
+          cursor: pointer;
+        }
       }
     }
   }

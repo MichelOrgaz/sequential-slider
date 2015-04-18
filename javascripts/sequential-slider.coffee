@@ -1,14 +1,3 @@
-
-
-  #so to sum it up, in your class definition:
-  # @nose: or @nose = defines a static (class) variable/function
-  # nose: defines a prototype variable/function
-  # nose= defines a private variable/function
-
-  #in your constructor:
-  # nose= defines a private variable for an instance of the class
-  # @nose= defines an ‘instance’ variable for an instance of the class
-
   # containts the source URL and the loaded status
   class ImageItem
     constructor: (@source, @loaded = false) ->
@@ -127,10 +116,6 @@
         if @imagePreloader.isPlanReady(plan_id)
           @endAllActivePlans()
           @startPlan(plan_id)
-        #@imagePreloader.waitPlanLoaded plan_id, ->
-        #	if @planToGo == plan_id
-        #		that.endAllActivePlans()
-        #		that.startPlan(plan_id)
 
     # return the list of the following plans into a plan
     getAllFollowingPlans: (plan_id) ->
